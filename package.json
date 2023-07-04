@@ -1,19 +1,23 @@
 {
-  "name": "ip-address-tracker-master",
+  "name": "code-proj-2",
   "version": "1.0.0",
-  "description": "![Design preview for the IP address tracker coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
     "start": "parcel index.html --open",
-    "build": "parcel build index.html --out-dir=build"
+    "build": "parcel build index.html --out-dir=build",
+    "predeploy": "npm run build",
+    "deploy": "vercel --prod"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel-bundler": "^1.12.5"
+    "parcel-bundler": "^1.12.5",
+    "vercel": "^23.0.1"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "leaflet": "^1.7.1",
     "ol": "^7.4.0"
   }
 }

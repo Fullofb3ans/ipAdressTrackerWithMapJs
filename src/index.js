@@ -30,24 +30,26 @@ function getValue(){
 }
 
 function printInfo(data){
-ipInfo.innerText = data.ip;
-locationInfo.innerText =data.location.country + ' '+data.location.region;
-timezoneInfo.innerText = data.location.timezone;
-ispInfo.innerText = data.isp;
+  console.log(data.location);
+
+  ipInfo.innerText = data.ip;
+  locationInfo.innerText =data.location.country + ' '+data.location.region;
+  timezoneInfo.innerText = data.location.timezone;
+  ispInfo.innerText = data.isp;
 };
 
 const mapArea = document.querySelector('#map');
 const map = new Map({
-    target: 'map',
+    target: mapArea,
     layers: [
       new TileLayer({
         source: new OSM(),
       }),
     ],
     view: new View({
-      center: [45.87373649724122, 52.2954639195323967],
-      zoom: 5,
-    }),
+      center: [0, 0],
+      zoom: 4, 
+    })
   });
   
 console.log(map);
